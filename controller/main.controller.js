@@ -40,11 +40,11 @@ let userLogin = async(req, res, next) => {
                 res.status(200).json({result});
             }
             else{
-                res.status(401).json(result);
+                res.status(401).json("Password Not Matched");
             }
         }
         else{
-            res.status(404).json(result);
+            res.status(404).json("User is not register.");
         }
     }
     catch(error){
